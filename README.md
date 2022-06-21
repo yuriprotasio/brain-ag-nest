@@ -10,7 +10,6 @@ yarn install
 
 ## Cofiguração do postgres
 ```bash
-Postgres
 Crie um banco de dados chamado: brain_ag
 Crie um banco de teste chamado: brain_ag_test
 Usuário: postgres
