@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "c372f403-acdf-488f-8d76-95f599148aea",
+		"name": "Brain Agriculture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4039384"
+	},
+	"item": [
+		{
+			"name": "Create Producer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cpf\": \"339.663.500-09\",\r\n  \"cnpj\": \"59.461.763/0001-82\",\r\n  \"producer_name\": \"Produtor 1\",\r\n  \"farm_name\": \"Fazenda 1\",\r\n  \"city\": \"São José dos Campos\",\r\n  \"state\": \"SP\",\r\n  \"total_farm_hectare\": 102.8,\r\n  \"arable_hectare\": 80.3,\r\n  \"vegetation_hectare\": 12.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/producers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"producers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Culture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producer_id\": \"84c158fb-9e69-488a-9058-2a151e3e72f4\",\r\n  \"culture_name\": \"Maçã\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cultures",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cultures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Producers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/producers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"producers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Initial Seed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/internals/initial-seed",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"internals",
+						"initial-seed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Totals General",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/info/general",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"info",
+						"general"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Totals States",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/info/states",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"info",
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Totals By Culture",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/info/cultures",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"info",
+						"cultures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Cultures",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cultures",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cultures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Producer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"a1c65c90-a7ba-4064-b29b-f537777d1f03\",\r\n        \"cpf\": \"339.663.500-09\",\r\n        \"cnpj\": \"59.461.763/0001-82\",\r\n        \"producer_name\": \"Itanhaem 7\",\r\n        \"farm_name\": \"Fazendinha tal 7\",\r\n        \"city\": \"Rio de Janeiro\",\r\n        \"state\": \"Rio de Janeiro\",\r\n        \"total_farm_hectare\": \"500.80\",\r\n        \"arable_hectare\": \"80.30\",\r\n        \"vegetation_hectare\": \"12.60\",\r\n        \"created_at\": \"2022-06-21T00:06:10.847Z\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/producers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"producers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Culture",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"b75ce3d9-324b-421e-a008-f1d40eb6df8d\",\r\n        \"producer_id\": \"a1c65c90-a7ba-4064-b29b-f537777d1f03\",\r\n        \"culture_name\": \"Feijão\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cultures",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cultures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Producer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/producers/84c158fb-9e69-488a-9058-2a151e3e72f4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"producers",
+						"84c158fb-9e69-488a-9058-2a151e3e72f4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Culture",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cultures/b75ce3d9-324b-421e-a008-f1d40eb6df8d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cultures",
+						"b75ce3d9-324b-421e-a008-f1d40eb6df8d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
