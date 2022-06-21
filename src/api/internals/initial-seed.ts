@@ -12,8 +12,8 @@ export class InitialSeed {
 
   @Get('/initial-seed')
   async seed(@Res() response: Response) {
-    const producerRepository = await connectionSource.getRepository(Producer);
-    const cultureRepository = await connectionSource.getRepository(Culture);
+    const producerRepository = connectionSource.getRepository(Producer);
+    const cultureRepository = connectionSource.getRepository(Culture);
     await producerRepository.save(producers);
     await cultureRepository.save(cultures);
 

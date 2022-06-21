@@ -8,26 +8,13 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Culture } from './models/culture.model';
 import { Producer } from './models/producer.model';
+import { connectionSource } from './database/index';
 
 @Module({
   imports: [
     Culture,
     Producer,
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: '123',
-      database: 'brain_ag',
-      logging: false,
-      entities: [
-        'src/models/**/*.ts'
-      ],
-      migrations: [
-        'src/database/migrations/**/*.ts'
-      ]
-    }),
+    TypeOrmModule.forRoot(connectionSource.options),
     CulturesModule,
     InfoModule,
     ProducersModule,

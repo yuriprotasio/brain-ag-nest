@@ -8,6 +8,18 @@ Brain AG, sistema crud de agricultura desenvolvido em nestjs e typeorm.
 yarn install
 ```
 
+## Cofiguração do postgres
+```bash
+Postgres
+Crie um banco de dados chamado: brain_ag
+Crie um banco de teste chamado: brain_ag_test
+Usuário: postgres
+Senha: 123
+
+Caso queira editar o nome do banco, usuario ou senha ↓
+Arquivo de conexão em: src\database\index.ts
+```
+
 ## Iniciando a aplicação
 
 ```bash
