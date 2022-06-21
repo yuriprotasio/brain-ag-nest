@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CulturesModule } from './api/cultures/cultures.module';
 import { InfoModule } from './api/info/info.module';
+import { InternalsModule } from './api/internals/internals.module';
 import { ProducersModule } from './api/producers/producers.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -29,7 +30,8 @@ import { Producer } from './models/producer.model';
     }),
     CulturesModule,
     InfoModule,
-    ProducersModule
+    ProducersModule,
+    InternalsModule
   ],
   controllers: [AppController],
   providers: [AppService],
