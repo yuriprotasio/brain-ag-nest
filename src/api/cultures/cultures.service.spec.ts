@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { forwardRef, INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { CulturesController } from './cultures.controller';
@@ -6,7 +5,7 @@ import { CulturesService } from './cultures.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Culture } from '../../models/culture.model';
 import { ProducersModule } from '../producers/producers.module';
-import { TypeOrmPostgresTestingModule } from '../../test-utils/typeorm-testing.module';
+import { TypeOrmPostgresTestingModule } from '../../../test/typeorm-testing.module';
 import * as sinon from 'sinon';
 import { ProducersRepository } from '../producers/producers.repository';
 import { CulturesRepository } from '../cultures/cultures.repository';

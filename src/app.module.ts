@@ -13,18 +13,18 @@ import { Producer } from './models/producer.model';
     Culture,
     Producer,
     TypeOrmModule.forRoot({
-      "type": "postgres",
-      "host": "localhost",
-      "port": 5432,
-      "username": "postgres",
-      "password": "123",
-      "database": "brain_ag",
-      "logging": false,
-      "entities": [
-        "src/models/**/*.ts"
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: '123',
+      database: 'brain_ag',
+      logging: false,
+      entities: [
+        'src/models/**/*.ts'
       ],
-      "migrations": [
-        "src/database/migrations/**/*.ts"
+      migrations: [
+        'src/database/migrations/**/*.ts'
       ]
     }),
     CulturesModule,

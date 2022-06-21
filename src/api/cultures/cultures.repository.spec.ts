@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { forwardRef, INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { CulturesController } from './cultures.controller';
